@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="FundSpark — a modern crowdfunding platform to launch campaigns, raise funds, and back the ideas you believe in." />
+  <meta name="keywords" content="crowdfunding, fundraising, campaigns, startups, donations, backers" />
+  <meta name="author" content="FundSpark" />
+  <meta property="og:title" content="FundSpark — Fund the Future" />
+  <meta property="og:description" content="Launch campaigns, raise funds, and back ideas you believe in." />
+  <meta property="og:type" content="website" />
+  <title>FundSpark — Fund the Future</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <!-- ===== Page Loader ===== -->
+  <div class="loader" id="loader" aria-hidden="true">
+    <div class="loader__spinner"></div>
+    <span class="loader__text">FundSpark</span>
+  </div>
+
+  <!-- ===== Header / Navbar ===== -->
+  <header class="header" id="header">
+    <div class="container header__inner">
+      <a href="#home" class="brand" aria-label="FundSpark home">
+        <span class="brand__mark" aria-hidden="true">◆</span>
+        <span class="brand__name">FundSpark</span>
+      </a>
+
+      <nav class="nav" id="nav" aria-label="Primary">
+        <ul class="nav__list">
+          <li><a href="#home" class="nav__link is-active" data-nav>Home</a></li>
+          <li><a href="#explore" class="nav__link" data-nav>Explore</a></li>
+          <li><a href="#create" class="nav__link" data-nav>Create</a></li>
+          <li><a href="#dashboard" class="nav__link" data-nav>Dashboard</a></li>
+          <li><a href="#about" class="nav__link" data-nav>About</a></li>
+          <li><a href="#contact" class="nav__link" data-nav>Contact</a></li>
+        </ul>
+      </nav>
+
+      <div class="header__actions">
+        <button class="theme-toggle" id="themeToggle" aria-label="Toggle dark mode" title="Toggle theme">
+          <span class="theme-toggle__icon" aria-hidden="true">☀</span>
+        </button>
+        <a href="#create" class="btn btn--primary btn--sm" data-nav>Start a Project</a>
+        <button class="nav-toggle" id="navToggle" aria-label="Open menu" aria-expanded="false">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main id="main">
+    <!-- ===== Hero ===== -->
+    <section class="hero section" id="home">
+      <div class="hero__glow" aria-hidden="true"></div>
+      <div class="container hero__inner">
+        <div class="hero__content reveal">
+          <span class="badge">🚀 Over $48M raised by our community</span>
+          <h1 class="hero__title text-balance">Fund the ideas that <span class="grad-text">shape tomorrow</span></h1>
+          <p class="hero__subtitle">FundSpark connects bold creators with backers who believe in them. Launch a campaign in minutes, share your story, and bring your vision to life.</p>
+          <div class="hero__cta">
+            <a href="#create" class="btn btn--primary" data-nav>Start Your Campaign</a>
+            <a href="#explore" class="btn btn--ghost" data-nav>Explore Projects</a>
+          </div>
+
+          <div class="stats" id="heroStats">
+            <div class="stat">
+              <span class="stat__num" data-count="12480" data-suffix="+">0</span>
+              <span class="stat__label">Projects Funded</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="48" data-prefix="$" data-suffix="M+">0</span>
+              <span class="stat__label">Total Raised</span>
+            </div>
+            <div class="stat">
+              <span class="stat__num" data-count="320000" data-suffix="+">0</span>
+              <span class="stat__label">Active Backers</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="hero__art reveal" aria-hidden="true">
+          <div class="glass-card hero-float hero-float--1">
+            <div class="mini-progress">
+              <div class="mini-progress__bar" style="width:78%"></div>
+            </div>
+            <strong>Solar Backpack</strong>
+            <span>78% funded · 412 backers</span>
+          </div>
+          <div class="glass-card hero-float hero-float--2">
+            <strong>$2,340</strong>
+            <span>raised in the last hour</span>
+          </div>
+          <div class="glass-card hero-float hero-float--3">
+            <span class="emoji-pill">💜 Trending now</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Trust / Categories ===== -->
+    <section class="section section--tight">
+      <div class="container">
+        <div class="cat-pills reveal" id="catPills">
+          <button class="cat-pill is-active" data-filter="all">All</button>
+          <button class="cat-pill" data-filter="Technology">Technology</button>
+          <button class="cat-pill" data-filter="Art">Art &amp; Design</button>
+          <button class="cat-pill" data-filter="Games">Games</button>
+          <button class="cat-pill" data-filter="Health">Health</button>
+          <button class="cat-pill" data-filter="Environment">Environment</button>
+          <button class="cat-pill" data-filter="Education">Education</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Explore Projects ===== -->
+    <section class="section" id="explore">
+      <div class="container">
+        <div class="section__head reveal">
+          <div>
+            <span class="eyebrow">Explore</span>
+            <h2 class="section__title">Discover live campaigns</h2>
+            <p class="section__lead">Browse, search, and back the projects making waves right now.</p>
+          </div>
+        </div>
+
+        <div class="explore-toolbar reveal">
+          <div class="search">
+            <span class="search__icon" aria-hidden="true">🔍</span>
+            <input type="search" id="searchInput" class="search__input" placeholder="Search campaigns..." aria-label="Search campaigns" />
+          </div>
+          <div class="sort">
+            <label for="sortSelect" class="sr-only">Sort projects</label>
+            <select id="sortSelect" class="sort__select">
+              <option value="popular">Most Popular</option>
+              <option value="newest">Newest</option>
+              <option value="progress">Funding Progress</option>
+              <option value="goal">Highest Goal</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="grid grid--cards" id="projectGrid" aria-live="polite"></div>
+        <p class="empty-state" id="emptyState" hidden>No campaigns match your search. Try another keyword or category.</p>
+      </div>
+    </section>
+
+    <!-- ===== Create Project ===== -->
+    <section class="section section--alt" id="create">
+      <div class="container create__layout">
+        <div class="create__intro reveal">
+          <span class="eyebrow">Create</span>
+          <h2 class="section__title">Launch your campaign</h2>
+          <p class="section__lead">Tell your story, set a goal, and start raising funds today. Your campaign appears instantly in Explore.</p>
+          <ul class="create__perks">
+            <li><span aria-hidden="true">✓</span> Free to create, no hidden fees</li>
+            <li><span aria-hidden="true">✓</span> Animated progress tracking</li>
+            <li><span aria-hidden="true">✓</span> Share with the world in one click</li>
+          </ul>
+        </div>
+
+        <form class="create-form glass-card reveal" id="createForm" novalidate>
+          <div class="form-row">
+            <label for="cTitle">Project Title</label>
+            <input type="text" id="cTitle" name="title" placeholder="e.g. Eco-Friendly Water Bottle" required />
+            <small class="error" data-error-for="cTitle"></small>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="cCategory">Category</label>
+              <select id="cCategory" name="category" required>
+                <option value="">Select category</option>
+                <option>Technology</option>
+                <option>Art</option>
+                <option>Games</option>
+                <option>Health</option>
+                <option>Environment</option>
+                <option>Education</option>
+              </select>
+              <small class="error" data-error-for="cCategory"></small>
+            </div>
+            <div class="form-row">
+              <label for="cGoal">Funding Goal ($)</label>
+              <input type="number" id="cGoal" name="goal" min="100" placeholder="10000" required />
+              <small class="error" data-error-for="cGoal"></small>
+            </div>
+          </div>
+
+          <div class="form-grid">
+            <div class="form-row">
+              <label for="cDuration">Campaign Duration (days)</label>
+              <input type="number" id="cDuration" name="duration" min="1" max="120" placeholder="30" required />
+              <small class="error" data-error-for="cDuration"></small>
+            </div>
+            <div class="form-row">
+              <label for="cImage">Project Image</label>
+              <input type="file" id="cImage" name="image" accept="image/*" />
+              <small class="hint">Optional — a cover will be auto-assigned if empty.</small>
+            </div>
+          </div>
+
+          <div class="form-row">
+            <label for="cDesc">Description</label>
+            <textarea id="cDesc" name="description" rows="4" placeholder="Describe what you're building and why it matters..." required></textarea>
+            <small class="error" data-error-for="cDesc"></small>
+          </div>
+
+          <div class="img-preview" id="imgPreview" hidden>
+            <img id="imgPreviewEl" alt="Selected project cover preview" />
+          </div>
+
+          <button type="submit" class="btn btn--primary btn--full">Publish Campaign</button>
+        </form>
+      </div>
+    </section>
+
+    <!-- ===== Dashboard ===== -->
+    <section class="section" id="dashboard">
+      <div class="container">
+        <div class="section__head reveal">
+          <div>
+            <span class="eyebrow">Dashboard</span>
+            <h2 class="section__title">Your creator dashboard</h2>
+            <p class="section__lead">A snapshot of your campaigns, funds, and recent activity.</p>
+          </div>
+        </div>
+
+        <div class="grid grid--stats reveal">
+          <div class="stat-card glass-card">
+            <span class="stat-card__icon">📁</span>
+            <span class="stat-card__num" id="dashTotal">0</span>
+            <span class="stat-card__label">Total Campaigns</span>
+          </div>
+          <div class="stat-card glass-card">
+            <span class="stat-card__icon">💰</span>
+            <span class="stat-card__num" id="dashRaised">$0</span>
+            <span class="stat-card__label">Total Funds Raised</span>
+          </div>
+          <div class="stat-card glass-card">
+            <span class="stat-card__icon">⚡</span>
+            <span class="stat-card__num" id="dashActive">0</span>
+            <span class="stat-card__label">Active Campaigns</span>
+          </div>
+          <div class="stat-card glass-card">
+            <span class="stat-card__icon">❤️</span>
+            <span class="stat-card__num" id="dashFav">0</span>
+            <span class="stat-card__label">Wishlisted</span>
+          </div>
+        </div>
+
+        <div class="dash__columns">
+          <div class="dash__panel glass-card reveal">
+            <h3 class="dash__title">Recent Donations</h3>
+            <ul class="txn-list" id="txnList">
+              <li class="txn-empty">No transactions yet. Back a project to see it here!</li>
+            </ul>
+          </div>
+          <div class="dash__panel glass-card reveal">
+            <h3 class="dash__title">Profile</h3>
+            <div class="profile">
+              <div class="profile__avatar" aria-hidden="true">JS</div>
+              <div>
+                <strong class="profile__name">Jordan Spark</strong>
+                <span class="profile__role">Creator · Member since 2024</span>
+              </div>
+            </div>
+            <div class="profile__meta">
+              <div><span>Email</span><strong>jordan@fundspark.io</strong></div>
+              <div><span>Location</span><strong>San Francisco, CA</strong></div>
+              <div><span>Backed Projects</span><strong id="profileBacked">0</strong></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Testimonials ===== -->
+    <section class="section section--alt" id="testimonials">
+      <div class="container">
+        <div class="section__head section__head--center reveal">
+          <div>
+            <span class="eyebrow">Loved by creators</span>
+            <h2 class="section__title">What our community says</h2>
+          </div>
+        </div>
+        <div class="grid grid--testimonials">
+          <figure class="testimonial glass-card reveal">
+            <blockquote>“FundSpark made launching effortless. We hit our goal in 6 days and the backers kept coming.”</blockquote>
+            <figcaption><strong>Maya Chen</strong><span>Founder, LumenLamp</span></figcaption>
+          </figure>
+          <figure class="testimonial glass-card reveal">
+            <blockquote>“The dashboard and progress bars kept our momentum visible. Best platform we've used.”</blockquote>
+            <figcaption><strong>Diego Ramos</strong><span>Creator, PixelQuest</span></figcaption>
+          </figure>
+          <figure class="testimonial glass-card reveal">
+            <blockquote>“Clean, fast, and beautiful. Backing projects feels rewarding and totally seamless.”</blockquote>
+            <figcaption><strong>Aisha Khan</strong><span>Backer &amp; Investor</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== About ===== -->
+    <section class="section" id="about">
+      <div class="container about__layout">
+        <div class="about__text reveal">
+          <span class="eyebrow">About Us</span>
+          <h2 class="section__title">We help great ideas find their people</h2>
+          <p class="section__lead">FundSpark was founded on a simple belief: bold ideas deserve a launchpad. We give creators the tools to share their vision and the audience to fund it.</p>
+          <div class="about__metrics">
+            <div><strong>2018</strong><span>Founded</span></div>
+            <div><strong>96%</strong><span>Avg. satisfaction</span></div>
+            <div><strong>180+</strong><span>Countries</span></div>
+          </div>
+        </div>
+        <div class="about__cards reveal">
+          <div class="value-card glass-card"><span>🎯</span><h4>Mission-driven</h4><p>Empower every creator to fund what matters.</p></div>
+          <div class="value-card glass-card"><span>🤝</span><h4>Community first</h4><p>Backers and creators grow together.</p></div>
+          <div class="value-card glass-card"><span>🔒</span><h4>Trusted</h4><p>Secure, transparent, and fair for all.</p></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== FAQ ===== -->
+    <section class="section section--alt" id="faq">
+      <div class="container container--narrow">
+        <div class="section__head section__head--center reveal">
+          <div>
+            <span class="eyebrow">FAQ</span>
+            <h2 class="section__title">Frequently asked questions</h2>
+          </div>
+        </div>
+        <div class="faq" id="faqList">
+          <details class="faq__item">
+            <summary>How much does it cost to launch a campaign?</summary>
+            <p>Creating a campaign on FundSpark is completely free. A small platform fee applies only to successfully funded projects.</p>
+          </details>
+          <details class="faq__item">
+            <summary>When do I receive the funds?</summary>
+            <p>Funds are transferred to your linked account within 5–7 business days after your campaign ends successfully.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Can backers get refunds?</summary>
+            <p>Refund policies depend on the campaign. Many creators offer refunds if a campaign doesn't reach its goal.</p>
+          </details>
+          <details class="faq__item">
+            <summary>Is this a real payment system?</summary>
+            <p>This is a frontend demo. All donations and transactions are simulated in your browser for demonstration purposes.</p>
+          </details>
+        </div>
+      </div>
+    </section>
+
+    <!-- ===== Contact + Newsletter ===== -->
+    <section class="section" id="contact">
+      <div class="container contact__layout">
+        <div class="contact__info reveal">
+          <span class="eyebrow">Contact</span>
+          <h2 class="section__title">Let's talk</h2>
+          <p class="section__lead">Questions, partnerships, or press? We'd love to hear from you.</p>
+          <ul class="contact__list">
+            <li><span aria-hidden="true">✉️</span> hello@fundspark.io</li>
+            <li><span aria-hidden="true">📞</span> +1 (555) 042-1990</li>
+            <li><span aria-hidden="true">📍</span> 500 Innovation Way, San Francisco</li>
+          </ul>
+          <div class="newsletter glass-card">
+            <h4>Join our newsletter</h4>
+            <p>Get the best new campaigns in your inbox weekly.</p>
+            <form class="newsletter__form" id="newsletterForm">
+              <input type="email" id="newsEmail" placeholder="you@email.com" aria-label="Email address" required />
+              <button class="btn btn--primary btn--sm" type="submit">Subscribe</button>
+            </form>
+            <small class="newsletter__msg" id="newsMsg" role="status"></small>
+          </div>
+        </div>
+
+        <form class="contact-form glass-card reveal" id="contactForm" novalidate>
+          <div class="form-row">
+            <label for="ctName">Name</label>
+            <input type="text" id="ctName" placeholder="Your name" required />
+            <small class="error" data-error-for="ctName"></small>
+          </div>
+          <div class="form-row">
+            <label for="ctEmail">Email</label>
+            <input type="email" id="ctEmail" placeholder="you@email.com" required />
+            <small class="error" data-error-for="ctEmail"></small>
+          </div>
+          <div class="form-row">
+            <label for="ctMsg">Message</label>
+            <textarea id="ctMsg" rows="5" placeholder="How can we help?" required></textarea>
+            <small class="error" data-error-for="ctMsg"></small>
+          </div>
+          <button type="submit" class="btn btn--primary btn--full">Send Message</button>
+        </form>
+      </div>
+    </section>
+  </main>
+
+  <!-- ===== Footer ===== -->
+  <footer class="footer">
+    <div class="container footer__inner">
+      <div class="footer__brand">
+        <a href="#home" class="brand"><span class="brand__mark" aria-hidden="true">◆</span><span class="brand__name">FundSpark</span></a>
+        <p>Fund the ideas that shape tomorrow.</p>
+      </div>
+      <nav class="footer__nav" aria-label="Footer">
+        <div><h5>Platform</h5><a href="#explore" data-nav>Explore</a><a href="#create" data-nav>Create</a><a href="#dashboard" data-nav>Dashboard</a></div>
+        <div><h5>Company</h5><a href="#about" data-nav>About</a><a href="#contact" data-nav>Contact</a><a href="#faq" data-nav>FAQ</a></div>
+        <div><h5>Legal</h5><a href="#">Privacy</a><a href="#">Terms</a><a href="#">Cookies</a></div>
+      </nav>
+    </div>
+    <div class="container footer__bottom">
+      <span>© <span id="year"></span> FundSpark. All rights reserved.</span>
+      <span>Made with 💜 for creators.</span>
+    </div>
+  </footer>
+
+  <!-- ===== Project Details Modal ===== -->
+  <div class="modal" id="projectModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__panel glass-card" role="document">
+      <button class="modal__close" aria-label="Close" data-close-modal>×</button>
+      <div class="modal__body" id="modalBody"><!-- injected --></div>
+    </div>
+  </div>
+
+  <!-- ===== Donation Modal ===== -->
+  <div class="modal" id="donateModal" aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="donateTitle">
+    <div class="modal__overlay" data-close-modal></div>
+    <div class="modal__panel modal__panel--sm glass-card" role="document">
+      <button class="modal__close" aria-label="Close" data-close-modal>×</button>
+      <h3 id="donateTitle" class="modal__heading">Back this project</h3>
+      <p class="modal__sub" id="donateProjectName"></p>
+      <div class="amount-grid" id="amountGrid">
+        <button class="amount-chip" data-amount="25">$25</button>
+        <button class="amount-chip" data-amount="50">$50</button>
+        <button class="amount-chip" data-amount="100">$100</button>
+        <button class="amount-chip" data-amount="250">$250</button>
+      </div>
+      <form id="donateForm" novalidate>
+        <div class="form-row">
+          <label for="customAmount">Custom amount ($)</label>
+          <input type="number" id="customAmount" min="1" placeholder="Enter amount" />
+        </div>
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="cardName">Name on card</label>
+            <input type="text" id="cardName" placeholder="Jordan Spark" required />
+          </div>
+          <div class="form-row">
+            <label for="cardNum">Card number</label>
+            <input type="text" id="cardNum" inputmode="numeric" maxlength="19" placeholder="4242 4242 4242 4242" required />
+          </div>
+        </div>
+        <div class="form-grid">
+          <div class="form-row">
+            <label for="cardExp">Expiry</label>
+            <input type="text" id="cardExp" maxlength="5" placeholder="MM/YY" required />
+          </div>
+          <div class="form-row">
+            <label for="cardCvc">CVC</label>
+            <input type="text" id="cardCvc" inputmode="numeric" maxlength="4" placeholder="123" required />
+          </div>
+        </div>
+        <button type="submit" class="btn btn--primary btn--full" id="confirmDonate">Confirm $0</button>
+        <small class="modal__note">🔒 Demo only — no real payment is processed.</small>
+      </form>
+    </div>
+  </div>
+
+  <!-- ===== Success Popup ===== -->
+  <div class="success" id="successPopup" aria-hidden="true" role="alertdialog" aria-labelledby="successTitle">
+    <div class="success__overlay" data-close-success></div>
+    <div class="success__card glass-card">
+      <div class="success__check" aria-hidden="true">✓</div>
+      <h3 id="successTitle">Thank you!</h3>
+      <p id="successMsg">Your contribution was successful.</p>
+      <button class="btn btn--primary" data-close-success>Done</button>
+    </div>
+  </div>
+
+  <!-- ===== Toast ===== -->
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <!-- ===== Back to top ===== -->
+  <button class="back-top" id="backTop" aria-label="Back to top" title="Back to top">↑</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
